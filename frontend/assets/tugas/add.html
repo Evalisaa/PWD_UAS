@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tambah Tugas</title>
+
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f4f4f9;
+            padding: 40px;
+        }
+
+        .container {
+            background: white;
+            width: 450px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 8px 14px;
+            background: #6b7280;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .back-btn:hover {
+            background: #4b5563;
+        }
+
+        h2 {
+            margin-bottom: 18px;
+            font-size: 22px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        textarea {
+            height: 130px;
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #6366f1;
+            border: none;
+            color: white;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4f46e5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- BUTTON KEMBALI -->
+        <a class="back-btn" href="/catatanTugas/frontend/catatanUser.php">⟵ Kembali</a>
+
+        <h2>Tambah Tugas Baru</h2>
+
+        <form action="../../../backend/tugas/add.php" method="POST">
+
+            <label>Judul Tugas</label>
+            <input type="text" name="judulTugas" required>
+
+            <label>Isi Tugas</label>
+            <textarea name="IsiTugas" required></textarea>
+
+            <label>Tanggal</label>
+            <input type="date" name="tanggal" required>
+
+            <button type="submit">Simpan Tugas</button>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
